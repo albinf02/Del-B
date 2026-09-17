@@ -1,34 +1,34 @@
 public class Student
 {
-   public string Name {get; }
-    
-    //kurser som som studenten har
-   public List<Course> Courses { get; } = new List<Course>();
+    public string Name { get; }
 
-   public Student(string name)
+    // Kurser som studenten har
+    public List<Course> Courses { get; } = new List<Course>();
+
+    public Student(string name)
     {
         Name = name;
     }
+
     public bool AddCourse(Course course)
     {
         if (Courses.Contains(course))
         {
             return false;
         }
+
         if (course.Students.Count >= course.Capacity)
         {
             return false;
         }
-        Courses.Add (course);
+
+        Courses.Add(course);
 
         if (!course.Students.Contains(this))
         {
             course.Students.Add(this);
         }
-      return true;
+
+        return true;
     }
-
-    
- }
-    
-
+}

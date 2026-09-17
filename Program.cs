@@ -4,6 +4,7 @@ Student Albin = new Student ("Albin");
 Student Filip = new Student ("Filip");
 
 Albin.AddCourse(english);
+Albin.AddCourse(english);
 english.AddStudent(Filip);
 Student Tomas = new Student("Tomas");
 bool added = english.AddStudent(Tomas);
@@ -19,6 +20,13 @@ foreach (Student student in english.Students)
 bool removed = english.RemoveStudent(Albin);
 
 Console.WriteLine($"Albin removed: {removed}");
+
+Console.WriteLine("Courses for Albin:");
+
+foreach (Course course in Albin.Courses)
+{
+    Console.WriteLine(course.Name);
+}
 
 Console.WriteLine("Students in the Course:");
 
