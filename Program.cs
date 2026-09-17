@@ -16,3 +16,16 @@ foreach (Student student in english.Students)
 {
     Console.WriteLine(student.Name);
 }
+bool removed = english.RemoveStudent(Albin);
+
+Console.WriteLine($"Albin removed: {removed}");
+
+Console.WriteLine("Students in the Course:");
+
+foreach (Student student in english.Students)
+{
+    Console.WriteLine(student.Name);
+}
+bool removedTomas = english.RemoveStudent(Tomas);
+
+Console.WriteLine($"Tomas removed: {removedTomas}");

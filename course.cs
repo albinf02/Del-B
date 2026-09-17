@@ -9,7 +9,7 @@ public List<Student> Students { get; } = new List<Student>();
         Name = name;
         Capacity = capacity;
     }
-
+// Lägger till en student
 public bool AddStudent(Student student)
 {
         if (Students.Contains(student))
@@ -28,5 +28,19 @@ public bool AddStudent(Student student)
         }
         return true;
     }
+    // tar bort en student
+public bool RemoveStudent(Student student)
+{
+    if (!Students.Remove(student))
+    {
+        return false;
+    }
+
+    student.Courses.Remove(this);
+
+    return true;
+}
+
+
 
 }
