@@ -12,23 +12,10 @@ public class Student
 
     public bool Join(Course course)
     {
-        if (Courses.Contains(course))
-        {
-            return false;
-        }
-
-        if (course.Students.Count >= course.MaxSeats)
-        {
-            return false;
-        }
-
-        Courses.Add(course);
-
-        if (!course.Students.Contains(this))
-        {
-            course.Students.Add(this);
-        }
-
-        return true;
+        return course.Enroll(this);
+    }
+    public bool Leave (Course course)
+    {
+        return course.Remove(this);
     }
 }

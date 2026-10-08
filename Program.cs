@@ -1,7 +1,7 @@
 ﻿Course english = new Course("English", 2);
 
-Student Albin = new Student ("Albin");
-Student Filip = new Student ("Filip");
+Student Albin = new Student("Albin");
+Student Filip = new Student("Filip");
 
 bool firstRegistration = Albin.Join(english);
 bool secondRegistration = Albin.Join(english);
