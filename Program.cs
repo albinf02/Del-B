@@ -3,17 +3,17 @@
 Student Albin = new Student ("Albin");
 Student Filip = new Student ("Filip");
 
-bool firstRegistration = Albin.AddCourse(english);
-bool secondRegistration = Albin.AddCourse(english);
+bool firstRegistration = Albin.Join(english);
+bool secondRegistration = Albin.Join(english);
 
 Console.WriteLine($"First registration: {firstRegistration}");
 Console.WriteLine($"Second registration: {secondRegistration}");
 
-english.AddStudent(Filip);
+english.Enroll(Filip);
 
 Student Tomas = new Student("Tomas");
 
-bool added = english.AddStudent(Tomas);
+bool added = english.Enroll(Tomas);
 
 Console.WriteLine($"Tomas added: {added}");
 Console.WriteLine("Students in the Course: ");
@@ -24,7 +24,7 @@ foreach (Student student in english.Students)
 {
     Console.WriteLine(student.Name);
 }
-bool removed = english.RemoveStudent(Albin);
+bool removed = english.Remove(Albin);
 
 Console.WriteLine($"Albin removed: {removed}");
 Console.WriteLine("Courses for Albin:");
@@ -40,5 +40,5 @@ foreach (Student student in english.Students)
 {
     Console.WriteLine(student.Name);
 }
-bool removedTomas = english.RemoveStudent(Tomas);
+bool removedTomas = english.Remove(Tomas);
 Console.WriteLine($"Tomas removed: {removedTomas}");

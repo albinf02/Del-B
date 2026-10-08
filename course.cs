@@ -1,26 +1,26 @@
 public class Course
 {
     public string Name { get; }
-    public int Capacity { get; }
+    public int MaxSeats { get; }
 
     // Studenter som är anmälda
     public List<Student> Students { get; } = new List<Student>();
 
-    public Course(string name, int capacity)
+    public Course(string name, int maxSeats)
     {
         Name = name;
-        Capacity = capacity;
+        MaxSeats = maxSeats;
     }
 
     // Lägger till en student
-    public bool AddStudent(Student student)
+    public bool Enroll(Student student)
     {
         if (Students.Contains(student))
         {
             return false;
         }
 
-        if (Students.Count >= Capacity)
+        if (Students.Count >= MaxSeats)
         {
             return false;
         }
@@ -36,7 +36,7 @@ public class Course
     }
 
     // Tar bort en student
-    public bool RemoveStudent(Student student)
+    public bool Remove(Student student)
     {
         if (!Students.Remove(student))
         {

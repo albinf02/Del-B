@@ -10,14 +10,14 @@ public class Student
         Name = name;
     }
 
-    public bool AddCourse(Course course)
+    public bool Join(Course course)
     {
         if (Courses.Contains(course))
         {
             return false;
         }
 
-        if (course.Students.Count >= course.Capacity)
+        if (course.Students.Count >= course.MaxSeats)
         {
             return false;
         }
