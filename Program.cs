@@ -44,3 +44,5 @@ Console.WriteLine($"Tomas removed: {removedTomas}");
 
 Filip.Schedule();
 Console.WriteLine(english);
+
+english.RollCall();

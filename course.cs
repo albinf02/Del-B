@@ -52,6 +52,15 @@ public class Course
         return $"{Name} ({Students.Count}/{MaxSeats} platser)";
     }
         
-    
+    public void RollCall()
+    {
+    Console.WriteLine($"Närvaro i {Name}:");
+
+    foreach (Student student in Students)
+        {
+            Console.WriteLine(student);
+        }
+    }
+
 
 }
