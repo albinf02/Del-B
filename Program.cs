@@ -16,29 +16,17 @@ Student Tomas = new Student("Tomas");
 bool added = english.Enroll(Tomas);
 
 Console.WriteLine($"Tomas added: {added}");
-Console.WriteLine("Students in the Course: ");
 
 
-foreach (Student student in english.Students)
-{
-    Console.WriteLine(student.Name);
-}
+
+english.RollCall();
+    
 bool removed = english.Remove(Albin);
-
 Console.WriteLine($"Albin removed: {removed}");
-Console.WriteLine("Courses for Albin:");
 
+Albin.Schedule();
+english.RollCall();
 
-foreach (Course course in Albin.Courses)
-{
-    Console.WriteLine(course.Name);
-}
-Console.WriteLine("Students in the Course:");
-
-foreach (Student student in english.Students)
-{
-    Console.WriteLine(student.Name);
-}
 bool removedTomas = english.Remove(Tomas);
 Console.WriteLine($"Tomas removed: {removedTomas}");
 
