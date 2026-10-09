@@ -1,7 +1,11 @@
-﻿Course english = new Course("English", 2);
+﻿// Skapa kurser och studenter
+
+Course english = new Course("English", 2);
 
 Student Albin = new Student("Albin");
 Student Filip = new Student("Filip");
+
+// Anmälan och dubbelanmälan
 
 bool firstRegistration = Albin.Join(english);
 bool secondRegistration = Albin.Join(english);
@@ -18,6 +22,8 @@ bool added = english.Enroll(Tomas);
 Console.WriteLine($"Tomas added: {added}");
 
 english.RollCall();
+
+// Avanmälan, även av någon som inte är anmäld
 
 bool removed = english.Remove(Albin);
 Console.WriteLine($"Albin removed: {removed}");
@@ -42,6 +48,8 @@ Console.WriteLine($"Filip left again: {leftAgain}");
 Filip.Schedule();
 english.RollCall();
 
+// Flera kurser
+
 Course math = new Course("Math", 3);
 
 Albin.Join(english);
@@ -50,6 +58,8 @@ math.Enroll(Albin);
 Albin.Schedule();
 Console.WriteLine(english);
 Console.WriteLine(math);
+
+// dubbelanmälan och full kurs från båda hållen
 
 bool filipEnrolled = english.Enroll(Filip);
 Console.WriteLine($"Filip enrolled: {filipEnrolled}");
