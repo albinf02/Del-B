@@ -42,3 +42,5 @@ foreach (Student student in english.Students)
 }
 bool removedTomas = english.Remove(Tomas);
 Console.WriteLine($"Tomas removed: {removedTomas}");
+
+Filip.Schedule();

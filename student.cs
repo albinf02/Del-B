@@ -18,4 +18,13 @@ public class Student
     {
         return course.Remove(this);
     }
+    public void Schedule()
+    {
+        Console.WriteLine($"{Name} går följande kurser");
+
+        foreach (Course course in Courses)
+        {
+            Console.WriteLine(course.Name);
+        }
+    }
 }
