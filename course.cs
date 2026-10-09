@@ -22,6 +22,8 @@ public class Course
 
         if (Students.Count >= MaxSeats)
         {
+            Console.WriteLine("Kursen är full");
+
             return false;
         }
 
@@ -51,12 +53,12 @@ public class Course
     {
         return $"{Name} ({Students.Count}/{MaxSeats} platser)";
     }
-        
+
     public void RollCall()
     {
-    Console.WriteLine($"Närvaro i {Name}:");
+        Console.WriteLine($"Närvaro i {Name}:");
 
-    foreach (Student student in Students)
+        foreach (Student student in Students)
         {
             Console.WriteLine(student);
         }
