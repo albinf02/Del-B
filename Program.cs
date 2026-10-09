@@ -51,3 +51,14 @@ Albin.Schedule();
 Console.WriteLine(english);
 Console.WriteLine(math);
 
+bool filipEnrolled = english.Enroll(Filip);
+Console.WriteLine($"Filip enrolled: {filipEnrolled}");
+
+bool filipAgain = english.Enroll(Filip);
+Console.WriteLine($"Filip enrolled again: {filipAgain}");
+
+bool tomasJoined = Tomas.Join(english);
+Console.WriteLine($"Tomas joined: {tomasJoined}");
+
+english.RollCall();
+Tomas.Schedule();

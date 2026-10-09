@@ -44,7 +44,6 @@ public class Course
         {
             return false;
         }
-
         student.Courses.Remove(this);
 
         return true;
@@ -63,6 +62,4 @@ public class Course
             Console.WriteLine(student);
         }
     }
-
-
 }
