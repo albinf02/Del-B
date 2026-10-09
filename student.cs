@@ -14,7 +14,7 @@ public class Student
     {
         return course.Enroll(this);
     }
-    public bool Leave (Course course)
+    public bool Leave(Course course)
     {
         return course.Remove(this);
     }
@@ -26,5 +26,9 @@ public class Student
         {
             Console.WriteLine(course.Name);
         }
+    }
+    public override string ToString()
+    {
+        return Name;
     }
 }

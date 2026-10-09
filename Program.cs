@@ -19,7 +19,6 @@ Console.WriteLine($"Tomas added: {added}");
 Console.WriteLine("Students in the Course: ");
 
 
-
 foreach (Student student in english.Students)
 {
     Console.WriteLine(student.Name);
@@ -44,3 +43,4 @@ bool removedTomas = english.Remove(Tomas);
 Console.WriteLine($"Tomas removed: {removedTomas}");
 
 Filip.Schedule();
+Console.WriteLine(english);

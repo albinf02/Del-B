@@ -47,4 +47,11 @@ public class Course
 
         return true;
     }
+    public override string ToString()
+    {
+        return $"{Name} ({Students.Count}/{MaxSeats} platser)";
+    }
+        
+    
+
 }
