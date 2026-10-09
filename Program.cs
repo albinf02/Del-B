@@ -17,8 +17,6 @@ bool added = english.Enroll(Tomas);
 
 Console.WriteLine($"Tomas added: {added}");
 
-
-
 english.RollCall();
     
 bool removed = english.Remove(Albin);
@@ -34,3 +32,9 @@ Filip.Schedule();
 Console.WriteLine(english);
 
 english.RollCall();
+
+bool left = Filip.Leave(english);
+Console.WriteLine($"Filip left: {left}");
+
+bool leftAgain = Filip.Leave(english);
+Console.WriteLine($"Filip left again: {leftAgain}");
